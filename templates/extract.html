@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}
+Extract Secret Message
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-lg">
+
+    <div class="card-header bg-success text-white">
+
+        <h2 class="text-center">
+
+            🔓 Extract Secret Message
+
+        </h2>
+
+    </div>
+
+    <div class="card-body">
+
+        <form action="/extract" method="POST" enctype="multipart/form-data">
+
+            <!-- Upload Image -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Select Stego Image
+
+                </label>
+
+                <input
+                    type="file"
+                    class="form-control"
+                    id="image"
+                    name="image"
+                    accept=".png,.jpg,.jpeg,.bmp"
+                    onchange="previewImage(event)"
+                    required>
+
+            </div>
+
+            <!-- Image Preview -->
+
+            <div class="text-center">
+
+                <img
+                    id="preview"
+                    class="preview-image"
+                    style="display:none;">
+
+            </div>
+
+            <hr>
+
+            <!-- Password -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+
+                    Password
+
+                </label>
+
+                <div class="input-group">
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password used during embedding"
+                        required>
+
+                    <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        onclick="togglePassword()">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="text-center">
+
+                <button
+                    type="submit"
+                    class="btn btn-success btn-lg">
+
+                    <i class="bi bi-unlock-fill"></i>
+
+                    Extract Message
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

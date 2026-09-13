@@ -1,0 +1,361 @@
+/* ==========================
+   Secure Steganography Theme
+========================== */
+
+body{
+    background:#f4f7fb;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    color:#222;
+}
+
+/* Navbar */
+
+.navbar{
+    background:linear-gradient(90deg,#0f172a,#1e3a8a)!important;
+}
+
+.navbar-brand{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-link{
+    color:white!important;
+    margin-left:12px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#38bdf8!important;
+}
+
+/* Cards */
+
+.card{
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.card-header{
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Buttons */
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-success{
+    background:#16a34a;
+    border:none;
+}
+
+.btn-primary:hover,
+.btn-success:hover{
+    transform:translateY(-2px);
+    transition:.3s;
+}
+
+/* Footer */
+
+.footer{
+    background:#0f172a;
+    color:white;
+}
+
+/* Upload Box */
+
+.upload-box{
+    border:3px dashed #3b82f6;
+    border-radius:15px;
+    padding:40px;
+    text-align:center;
+    background:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.upload-box:hover{
+    background:#eef6ff;
+}
+
+/* Image Preview */
+
+.preview-image{
+    max-width:100%;
+    max-height:320px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    margin-top:20px;
+}
+
+/* Statistics Cards */
+
+.stat-card{
+    text-align:center;
+    padding:20px;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.stat-card h2{
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.stat-card p{
+    color:#666;
+}
+
+/* Textarea */
+
+textarea{
+    resize:none;
+}
+
+/* Password */
+
+.password-toggle{
+    cursor:pointer;
+}
+
+/* Hero Section */
+
+.hero{
+    background:linear-gradient(135deg,#1d4ed8,#0f172a);
+    color:white;
+    border-radius:20px;
+    padding:60px;
+}
+
+.hero h1{
+    font-weight:bold;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* Animation */
+
+.card{
+    animation:fade .5s ease-in;
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.preview-image{
+
+max-height:350px;
+
+border-radius:15px;
+
+box-shadow:0 0 20px rgba(0,0,0,.15);
+
+margin-bottom:20px;
+
+}
+
+textarea{
+
+font-size:16px;
+
+}
+
+.input-group button{
+
+font-size:18px;
+
+}
+
+.card{
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.stat-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 10px 20px rgba(0,0,0,.10);
+
+margin-bottom:20px;
+
+transition:.3s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.stat-card h2{
+
+color:#2563eb;
+
+font-size:36px;
+
+font-weight:bold;
+
+}
+
+.stat-card p{
+
+font-size:18px;
+
+color:#555;
+
+}
+
+.alert{
+
+border-radius:15px;
+
+}
+
+.form-control{
+
+border-radius:10px;
+
+}
+
+.btn{
+
+border-radius:10px;
+
+font-weight:600;
+
+}
+
+.card-header{
+
+font-size:24px;
+
+}
+
+.preview-image{
+
+max-height:300px;
+
+border-radius:15px;
+
+margin-top:20px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+.card{
+
+margin-bottom:30px;
+
+}
+
+/* ==========================
+   Drag & Drop Upload
+========================== */
+
+.upload-box{
+
+    border:3px dashed #2563eb;
+
+    border-radius:20px;
+
+    background:#ffffff;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.upload-box:hover{
+
+    background:#eef5ff;
+
+    transform:scale(1.01);
+
+}
+
+.upload-box.dragover{
+
+    border-color:#16a34a;
+
+    background:#e8fff1;
+
+}
+
+.upload-box i{
+
+    font-size:80px;
+
+}
+
+#file-name{
+
+    font-weight:bold;
+
+    color:#2563eb;
+
+}
+
+.comparison-image{
+
+    max-height:350px;
+
+    border-radius:15px;
+
+    border:2px solid #ddd;
+
+    transition:.3s;
+
+}
+
+.comparison-image:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}

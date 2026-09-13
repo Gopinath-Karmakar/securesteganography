@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}
+Result
+{% endblock %}
+
+{% block content %}
+
+{% if mode=="embed" %}
+
+<div class="card shadow-lg">
+
+    <div class="card-header bg-success text-white">
+
+        <h2 class="text-center">
+
+            ✅ Embedding Successful
+
+        </h2>
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="stat-card">
+
+                    <h2>{{ capacity.Characters }}</h2>
+
+                    <p>Capacity (Characters)</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="stat-card">
+
+                    <h2>{{ mse }}</h2>
+
+                    <p>MSE</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="stat-card">
+
+                    <h2>{{ psnr }}</h2>
+
+                    <p>PSNR (dB)</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+<h3 class="text-center mb-4">
+    Image Comparison
+</h3>
+
+<div class="row">
+
+    <div class="col-md-6 text-center">
+
+        <h5>Original Image</h5>
+
+        <img
+            src="{{ url_for('uploaded_file', filename=original_image) }}"
+            class="img-fluid comparison-image">
+
+    </div>
+
+    <div class="col-md-6 text-center">
+
+        <h5>Stego Image</h5>
+
+        <img
+            src="{{ url_for('output_file', filename=stego_image) }}"
+            class="img-fluid comparison-image">
+
+    </div>
+
+</div>
+
+<br>
+
+        <hr>
+
+        <h4>
+
+            Generated Stego Image
+
+        </h4>
+
+        <div class="alert alert-success">
+
+            {{ image_name }}
+
+        </div>
+
+        <div class="text-center">
+
+            <a href="/download/{{ image_name }}"
+               class="btn btn-success btn-lg">
+
+                <i class="bi bi-download"></i>
+
+                Download Stego Image
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endif %}
+
+
+
+{% if mode=="extract" %}
+
+<div class="card shadow-lg">
+
+    <div class="card-header bg-primary text-white">
+
+        <h2 class="text-center">
+
+            🔓 Extraction Successful
+
+        </h2>
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="alert alert-success">
+
+            <h4>
+
+                Recovered Message
+
+            </h4>
+
+            <hr>
+
+            <p style="font-size:20px;">
+
+                {{ message }}
+
+            </p>
+
+        </div>
+
+        <div class="text-center">
+
+            <a href="/extract"
+               class="btn btn-primary">
+
+                Extract Another
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endif %}
+
+{% endblock %}
